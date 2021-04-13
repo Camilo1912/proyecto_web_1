@@ -1,26 +1,33 @@
 body {
-    /*display: flex;
-    justify-content: space-evenly;*/
-    background-color: rgb(255, 255, 255) ;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(32, 178, 170);
 }
 
+.general-container {
+    width: 80%;
+    box-shadow: 0px 2px 20px rgb(104, 104, 104);
+}
 header {
     background-color: white;
-    /*
-    box-shadow: 0px 2px 20px rgb(104, 104, 104);*/
+    display: flex;
+    flex-direction: column;
 }
 
 .titulo-principal {
     font-weight: bolder;
     padding-left: 50px;
     padding-top: 5px;
+    
 }
 .titulo-secundario {
     display: flex;
     color: rgb(104, 104, 104);
     padding-left: 50px;
     padding-top: 15px;
+    padding-right: 50px;
     padding-bottom: 15px;
+    border-bottom: 2px solid lightseagreen;
 }
 
 .menu-principal-container {
@@ -61,7 +68,8 @@ header {
     display: flex;
     background-color: #242b2e;
     justify-content: space-around;
-    border-radius: 7px;
+    /*
+    border-radius: 7px;*/
 }
 
 .menu-secundario-container a {
@@ -74,8 +82,36 @@ header {
 
 .menu-secundario-container a:hover{
     background-color: lightseagreen;
+    box-shadow: 0px 2px 7px rgb(104, 104, 104);
 }
 
+.contenido-container {
+    background-color: white;
+    padding-top:25px;
+}
+
+.articulo-abdomen {
+    display: flex;
+    padding: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 5px ridge lightseagreen;
+}
+
+footer {
+    background-color:  #242b2e;
+    color: lightseagreen;
+}
+
+
+.imagen-abdominales {
+    /*border: 2px solid lightseagreen;*/
+    box-shadow: 0px 2px 7px rgb(104, 104, 104);
+}
+
+.texto-articulo {
+    padding: 15px;
+}
 
 @media (max-width: 600px) {
     .menu-items-container {
@@ -97,7 +133,12 @@ header {
     .menu-secundario-container a{
         width: 100%;
     }
+    .articulo-abdomen {
+        flex-direction: column;
+    }
 }
+
+
 
 @media (max-width: 950px) {
     .menu-items-container img{
@@ -120,6 +161,7 @@ header {
         
     }*/
 }
+
 
 
 
