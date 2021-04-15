@@ -195,9 +195,10 @@ header {
     color: lightseagreen;
 }
 
-
-
-
+.seccion-secundaria {
+    display: flex;
+    align-items: flex-start;
+}
 
 @media (max-width: 768px) {
     .menu-items-container {
@@ -226,6 +227,8 @@ header {
     }
     .seccion-secundaria {
         flex-direction: column;
+        align-items: center;
+        padding: 20px;
     }
     .menu-y-titulo {
         flex-direction: column;
