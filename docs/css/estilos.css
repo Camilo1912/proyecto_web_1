@@ -107,12 +107,15 @@ header {
     padding-top:25px;
 }
 
-.articulo-abdomen {
+.seccion-secundaria {
     display: flex;
     padding: 50px;
     padding-top: 25px;
     padding-bottom: 25px;/*
     border-bottom: 5px ridge lightseagreen;*/
+}
+.video-informatico {
+    text-align: center;
 }
 
 .footer-container {
@@ -162,13 +165,27 @@ header {
     
 }
 
-.imagen-abdominales {
-    /*border: 2px solid lightseagreen;*/
+.imagen-abdominales{
+    display: flex;
+    justify-content: center;
+    /*border: 2px solid lightseagreen;*//*
+    box-shadow: 0px 2px 7px rgb(104, 104, 104);*/
+}
+
+.imagen-abdominales{
     box-shadow: 0px 2px 7px rgb(104, 104, 104);
 }
 
 .texto-articulo {
     padding: 15px;
+}
+
+.titulo-seccion {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-bottom: 4px double rgb(42, 131, 126);
 }
 
 @media (max-width: 720px) {
@@ -196,7 +213,7 @@ header {
     .menu-secundario-container a{
         width: 100%;
     }
-    .articulo-abdomen {
+    .seccion-secundaria {
         flex-direction: column;
     }
     .menu-y-titulo {
