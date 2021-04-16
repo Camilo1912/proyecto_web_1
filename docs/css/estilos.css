@@ -195,9 +195,29 @@ header {
     color: lightseagreen;
 }
 
+.imagen-dieta {
+    height: 100%;
+    width: 100%;
+}
+
 .seccion-secundaria {
     display: flex;
     align-items: flex-start;
+}
+
+.volver-inicio {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.volver-inicio a {
+    background-color: rgb(230, 230, 230);
+    color: gray;
+    border-radius: 15px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -225,11 +245,7 @@ header {
     .menu-secundario-container a{
         width: 100%;
     }
-    .seccion-secundaria {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
+    
     .menu-y-titulo {
         flex-direction: column;
         padding-right: 0px;
@@ -271,6 +287,12 @@ header {
 
     .footer-container div ul{
         padding: 0px;
+    }
+
+    .seccion-secundaria {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
     }
     /*
     .menu-items-container {
