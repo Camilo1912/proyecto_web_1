@@ -1,5 +1,9 @@
 body {
     background-color: rgb(42, 131, 126);
+    background-image: url("../Images/COVID-19-GYM-6-scaled.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .general-container {
@@ -7,68 +11,75 @@ body {
     flex-direction: column;
     margin: auto;
     width: 75%;
-    box-shadow: 0px 0px 69px 2px #1b524e;
+    box-shadow: 0px 0px 150px 2px #000000;
 }
 header {
-    background-color: white;
     display: flex;
     flex-direction: column;
-    padding-top: 15px;
 }
 
 .pagina-actual {
-    background-color: rgb(233, 233, 233);
-    border-radius: 5px;
+    background-color: lightseagreen;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.menu-items-container .pagina-actual {
+    color: white;
 }
 .titulo-principal {
     font-weight: bolder;
-    padding-left: 50px;
-    padding-top: 5px;
     width: 30%;
-}
-.titulo-secundario {
+    text-align: center;
+    color: black;
     display: flex;
-    color: rgb(104, 104, 104);
-    padding-left: 50px;
-    padding-top: 15px;
-    padding-right: 50px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid rgb(42, 131, 126);
+    justify-content: center;
+    align-items: center;
 }
 
-.titulo-secundario h2{
-    font-size: 25px;
+.titulo-principal h1 {
+    padding: 0px;
+    color: white;
 }
+
 .menu-y-titulo {
     display: flex;
-    padding-right: 30px;
+    padding-right: 15px;
+    background-color: #242b2e7a;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-bottom: 10px solid lightseagreen;
 }
 .menu-principal-container {
-    padding-bottom: 10px;
     width: 70%;
+    padding-top: 70px;
 }
 
 .menu-items-container {
     display: flex;
-    justify-content: space-around;
-    background-color: rgb(255, 255, 255);
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0);
     text-align: center;
     text-decoration: none;
     align-items: center;
+    border: 1px solid gray;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom: 0px;
 }
+
 .menu-items-container a {
     text-decoration: none;
     font-weight: bolder;
-    color: rgb(48, 48, 48);
+    color: white;
+    width: 100%;
     padding: 10px;
-    width: 25%;
-    border-bottom: 2px solid rgb(255, 255, 255);
 }
+
 .menu-items-container a:hover {
     /*
     background-color: rgb(108, 184, 180);*/
     color: lightseagreen;
-    border-bottom: 2px solid lightseagreen;
     /*
     box-shadow: 0px 2px 7px rgb(104, 104, 104);*/
 }
@@ -104,7 +115,8 @@ header {
 
 .contenido-container {
     background-color: white;
-    padding-top:25px;
+    padding-top: 25px;
+    padding-bottom: 20px;
 }
 
 .seccion-secundaria {
@@ -179,11 +191,15 @@ header {
 .video-informatico iframe{
     height: auto;
     width: auto;
+
 }
 
 .texto-articulo {
     padding: 15px;
+    margin-left: 20px;
     color:#1a635f;
+    font-weight: lighter;
+    font-size: 18px;
 }
 
 .titulo-seccion {
@@ -231,13 +247,12 @@ header {
         width: 100%;
     }
     .titulo-principal {
-        text-align: center;
-        padding-left: 0px;
-        width: 100%;
         margin: auto;
+        padding-top: 15px;
     }
     .menu-principal-container{
         width: 100%;
+        padding-top: 0px;
     }
     .menu-secundario-container {
         flex-direction: column;
