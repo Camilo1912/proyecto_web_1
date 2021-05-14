@@ -45,7 +45,7 @@ header {
 .menu-y-titulo {
     display: flex;
     padding-right: 15px;
-    background-color: #242b2e7a;
+    background-color: #242b2eb9;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     border-bottom: 10px solid lightseagreen;
