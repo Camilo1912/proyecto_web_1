@@ -239,6 +239,7 @@ header {
 @media (max-width: 768px) {
     .menu-items-container {
         flex-direction: column;
+        border: 0px;
     }
     .menu-items-container img{
         display: none;
@@ -260,10 +261,14 @@ header {
     .menu-secundario-container a{
         width: 100%;
     }
+    .pagina-actual {
+        border-radius: 0px;
+    }
     
     .menu-y-titulo {
         flex-direction: column;
         padding-right: 0px;
+        border: 0px;
     }
 
 }
