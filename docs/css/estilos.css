@@ -58,11 +58,11 @@ header {
 .menu-items-container {
     display: flex;
     justify-content: space-evenly;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: #2e373b5e;
     text-align: center;
     text-decoration: none;
     align-items: center;
-    border: 1px solid gray;
+    border: 1px solid #3e4b50b0;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     border-bottom: 0px;
