@@ -4,6 +4,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Regular.ttf');
 }
 
 .general-container {
@@ -13,6 +15,7 @@ body {
     width: 75%;
     box-shadow: 0px 0px 150px 2px #000000;
 }
+
 header {
     display: flex;
     flex-direction: column;
@@ -27,6 +30,7 @@ header {
 .menu-items-container .pagina-actual {
     color: white;
 }
+
 .titulo-principal {
     font-weight: bolder;
     width: 30%;
@@ -45,11 +49,12 @@ header {
 .menu-y-titulo {
     display: flex;
     padding-right: 15px;
-    background-color: #242b2eb9;
+    background-color: #242b2ecc;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    border-bottom: 10px solid lightseagreen;
+    border-bottom: 5px solid lightseagreen;
 }
+
 .menu-principal-container {
     width: 70%;
     padding-top: 70px;
@@ -58,7 +63,7 @@ header {
 .menu-items-container {
     display: flex;
     justify-content: space-evenly;
-    background-color: #2e373b5e;
+    background-color: #2e373ba2;
     text-align: center;
     text-decoration: none;
     align-items: center;
@@ -70,7 +75,7 @@ header {
 
 .menu-items-container a {
     text-decoration: none;
-    font-weight: bolder;
+    font-weight: normal;
     color: white;
     width: 100%;
     padding: 10px;
@@ -132,10 +137,13 @@ header {
 
 .footer-container {
     display: flex;
-    background-color: #242b2e;
+    /* background-color: #242b2e; */
     color: gray;
     padding: 50px;
     border-top: 4px solid rgb(42, 131, 126);
+    background-color: #242b2ef5;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 }
 .footer-container div {
     width: 33%;
@@ -198,7 +206,7 @@ header {
     padding: 15px;
     margin-left: 20px;
     color:#1a635f;
-    font-weight: lighter;
+    font-weight: normal;
     font-size: 18px;
 }
 
@@ -245,9 +253,11 @@ header {
     .menu-items-container img{
         display: none;
     }
+    /* 
     .menu-items-container a{
         width: 100%;
     }
+    */
     .titulo-principal {
         margin: auto;
         padding-top: 15px;
@@ -259,9 +269,11 @@ header {
     .menu-secundario-container {
         flex-direction: column;
     }
+    /*
     .menu-secundario-container a{
         width: 100%;
     }
+    */
     .pagina-actual {
         border-radius: 0px;
     }
