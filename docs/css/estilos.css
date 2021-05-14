@@ -240,6 +240,7 @@ header {
     .menu-items-container {
         flex-direction: column;
         border: 0px;
+        background-color: #242b2e00;
     }
     .menu-items-container img{
         display: none;
