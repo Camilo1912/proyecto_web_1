@@ -5,7 +5,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     font-family: 'Montserrat';
-    src: url('../font/Montserrat-Regular.ttf');
+    /* src: url('../font/Montserrat-Regular.ttf'); */
 }
 
 .general-container {
@@ -25,11 +25,12 @@ header {
     background-color: lightseagreen;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-}
-
-.menu-items-container .pagina-actual {
     color: white;
 }
+
+/* .menu-items-container .pagina-actual {
+    color: white;
+} */
 
 .titulo-principal {
     font-weight: bolder;
@@ -81,20 +82,24 @@ header {
     padding: 10px;
 }
 
-.menu-items-container a:hover {
-    /*
-    background-color: rgb(108, 184, 180);*/
+.not-pagina-actual:hover {
     color: lightseagreen;
-    /*
-    box-shadow: 0px 2px 7px rgb(104, 104, 104);*/
 }
 
 .carousel-control-next:hover {
-    background-color: rgb(172, 172, 172);
+    background-color: rgba(32, 178, 171, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
+/* .sr-only {
+    display: none;
+} */
+
 .carousel-control-prev:hover {
-    background-color: rgb(172, 172, 172);
+    background-color: rgba(32, 178, 171, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .menu-secundario-container {
@@ -131,6 +136,7 @@ header {
     padding-bottom: 25px;/*
     border-bottom: 5px ridge lightseagreen;*/
 }
+
 .video-informatico {
     text-align: center;
 }
@@ -168,6 +174,7 @@ header {
     box-shadow: 0px 2px 7px rgb(0, 0, 0);
     padding: 5px;
 }
+
 .listado-redes {
     display: flex;
     justify-content: space-around;
@@ -198,7 +205,6 @@ header {
 .video-informatico iframe{
     height: auto;
     width: auto;
-
 }
 
 .texto-articulo {
