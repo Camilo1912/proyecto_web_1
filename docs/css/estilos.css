@@ -28,10 +28,6 @@ header {
     color: white;
 }
 
-/* .menu-items-container .pagina-actual {
-    color: white;
-} */
-
 .titulo-principal {
     font-weight: bolder;
     width: 30%;
@@ -92,10 +88,6 @@ header {
     -webkit-backdrop-filter: blur(10px);
 }
 
-/* .sr-only {
-    display: none;
-} */
-
 .carousel-control-prev:hover {
     background-color: rgba(32, 178, 171, 0.5);
     backdrop-filter: blur(10px);
@@ -106,8 +98,6 @@ header {
     display: flex;
     background-color: #242b2e;
     justify-content: space-around;
-    /*
-    border-radius: 7px;*/
 }
 
 .menu-secundario-container a {
@@ -133,8 +123,7 @@ header {
     display: flex;
     padding: 70px;
     padding-top: 25px;
-    padding-bottom: 25px;/*
-    border-bottom: 5px ridge lightseagreen;*/
+    padding-bottom: 25px;
 }
 
 .video-informatico {
@@ -194,8 +183,6 @@ header {
 .imagen-abdominales{
     display: flex;
     justify-content: center;
-    /*border: 2px solid lightseagreen;*//*
-    box-shadow: 0px 2px 7px rgb(104, 104, 104);*/
 }
 
 .imagen-abdominales img{
@@ -258,14 +245,14 @@ header {
     .menu-items-container img{
         display: none;
     }
-    /* 
-    .menu-items-container a{
-        width: 100%;
-    }
-    */
-    .titulo-principal {
+
+    .titulo-principal{
         margin: auto;
         padding-top: 15px;
+    }
+    .titulo-principal h1 {
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     .menu-principal-container{
         width: 100%;
@@ -274,11 +261,7 @@ header {
     .menu-secundario-container {
         flex-direction: column;
     }
-    /*
-    .menu-secundario-container a{
-        width: 100%;
-    }
-    */
+
     .pagina-actual {
         border-radius: 0px;
     }
@@ -332,22 +315,6 @@ header {
         align-items: center;
         padding: 20px;
     }
-    /*
-    .menu-items-container {
-        display: none;
-    }
-    .dropdown {
-        width: 100%;
-    }*/
-}
-
-@media (min-width: 950px) {
-    /*
-    .dropdown {
-        display: none;
-        background-color: lightgray;
-        
-    }*/
 }
 
 
