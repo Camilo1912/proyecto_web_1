@@ -50,8 +50,8 @@ header {
     display: flex;
     padding-right: 15px;
     background-color: #242b2ecc;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-bottom: 5px solid lightseagreen;
 }
 
@@ -141,9 +141,8 @@ header {
     color: gray;
     padding: 50px;
     border-top: 4px solid rgb(42, 131, 126);
-    background-color: #242b2ef5;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    background-color: #242b2e;
+
 }
 .footer-container div {
     width: 33%;
