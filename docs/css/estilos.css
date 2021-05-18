@@ -1,5 +1,4 @@
 body {
-    background-color: rgb(42, 131, 126);
     background-image: url("../Images/COVID-19-GYM-6-scaled.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -132,7 +131,6 @@ header {
 
 .footer-container {
     display: flex;
-    /* background-color: #242b2e; */
     color: gray;
     padding: 50px;
     border-top: 4px solid rgb(42, 131, 126);
@@ -237,6 +235,9 @@ header {
 }
 
 @media (max-width: 768px) {
+    .sr-only {
+        display: none;
+    }
     .menu-items-container {
         flex-direction: column;
         border: 0px;
@@ -245,7 +246,6 @@ header {
     .menu-items-container img{
         display: none;
     }
-
     .titulo-principal{
         margin: auto;
         padding-top: 15px;
@@ -261,17 +261,14 @@ header {
     .menu-secundario-container {
         flex-direction: column;
     }
-
     .pagina-actual {
         border-radius: 0px;
     }
-    
     .menu-y-titulo {
         flex-direction: column;
         padding-right: 0px;
         border: 0px;
     }
-
 }
 
 @media (max-width: 1230px) {
@@ -293,29 +290,25 @@ header {
     .titulo-principal {
         width: 40%;
     }
-
     .footer-container {
         flex-direction: column;
     }
-
     .footer-container div{
         width: 100%;
     }
-
     .footer-container div ul {
         text-align: center;
     }
-
     .footer-container div ul{
         padding: 0px;
     }
-
     .seccion-secundaria {
         flex-direction: column;
         align-items: center;
         padding: 20px;
     }
 }
+
 
 
 
