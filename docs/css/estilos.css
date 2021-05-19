@@ -20,6 +20,48 @@ header {
     flex-direction: column;
 }
 
+/* ----------------------------------------------------------  estadisticas covid-19*/
+.estadisticas-covid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 20px;
+    width: 100%;
+
+}
+
+.contenedor-covid {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-covid h2{
+    /* text-align: center; */
+    border-bottom: 3px solid red;
+    padding-bottom: 20px;
+    /* width: 50%; */
+}
+
+.cont-estadis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: 1px solid lightseagreen;
+    margin: 15px;
+    padding: 20px;
+    box-shadow: 0px 7px 25px rgba(100, 100, 100, 0.295);
+    text-align: center;
+}
+
+#cmb-covid {
+    margin: 10px;
+}
+/* ------------------------------------------------------------ */
+
+
 .pagina-actual {
     background-color: lightseagreen;
     border-top-left-radius: 5px;
@@ -269,6 +311,10 @@ header {
         padding-right: 0px;
         border: 0px;
     }
+
+    .estadisticas-covid {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 1230px) {
@@ -298,8 +344,6 @@ header {
     }
     .footer-container div ul {
         text-align: center;
-    }
-    .footer-container div ul{
         padding: 0px;
     }
     .seccion-secundaria {
