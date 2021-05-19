@@ -24,7 +24,7 @@ header {
 .estadisticas-covid {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-top: 20px;
     width: 100%;
 
@@ -314,6 +314,10 @@ header {
 
     .estadisticas-covid {
         flex-direction: column;
+    }
+
+    .cont-estadis {
+        width: auto;
     }
 }
 
