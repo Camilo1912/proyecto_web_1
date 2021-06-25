@@ -1,0 +1,161 @@
+{% extends 'Registro/base/base.html' %}
+
+{% block content %}
+
+    {% if object_list %}
+        <div class="titulo-seccion" id="abdomen">
+            <h1>ABDOMEN</h1>
+        </div>
+        {% for ejercicio in object_list %}
+            
+            {% if ejercicio.section == 'ABDOMEN' %}
+                
+
+                <article class="seccion-secundaria">
+                    
+                    <div class="imagen-abdominales">
+                        <img src="../../static/img/{{ ejerciciofoto.imagen }}" alt="rutina-abdominales-imagen">
+                    </div>
+                    
+                    <div class="texto-articulo" >
+                        
+                        <h2>{{ ejercicio.nombre_ejercicio }}</h2>
+                        <p>
+                            {{ ejercicio.descripcion1_ejercicio }}
+                        </p>
+                        <p>
+                            {{ ejercicio.descripcion2_ejercicio }}
+                        </p>
+                        <P>
+                            {{ ejercicio.pasos }}
+                        </P>
+                        
+                    </div>
+                    
+                </article>
+                
+                <div class="volver-inicio" >
+                    <a href="#inicio" class="volver-inicio"> subir</a>
+                </div>
+
+            {% endif %}
+            
+        {% endfor %}
+
+        <div class="titulo-seccion" id="espalda">
+            <h1>ESPALDA</h1>
+        </div>
+        {% for ejercicio in object_list %}
+
+            {% if ejercicio.section == 'ESPALDA' %}
+                <article class="seccion-secundaria">
+                    
+                    <div class="imagen-abdominales">
+                        <img src="../../static/img/{{ ejerciciofoto.imagen }}" alt="rutina-abdominales-imagen">
+                    </div>
+                    
+                    <div class="texto-articulo" >
+                        
+                        <h2>{{ ejercicio.nombre_ejercicio }}</h2>
+                        <p>
+                            {{ ejercicio.descripcion1_ejercicio }}
+                        </p>
+                        <p>
+                            {{ ejercicio.descripcion2_ejercicio }}
+                        </p>
+                        <P>
+                            {{ ejercicio.pasos }}
+                        </P>
+                        
+                    </div>
+                    
+                </article>
+                
+                <div class="volver-inicio" >
+                    <a href="#inicio" class="volver-inicio"> subir</a>
+                </div>
+
+            {% endif %}
+
+        {% endfor %}
+        
+
+        <div class="titulo-seccion" id="pecho">
+            <h1>PECHO</h1>
+        </div>
+        {% for ejercicio in object_list %}
+
+            {% if ejercicio.section == 'PECHO' %}
+                <article class="seccion-secundaria">
+                    
+                    <div class="imagen-abdominales">
+                        <img src="../../static/img/{{ ejerciciofoto.imagen }}" alt="rutina-abdominales-imagen">
+                    </div>
+                    
+                    <div class="texto-articulo" >
+                        
+                        <h2>{{ ejercicio.nombre_ejercicio }}</h2>
+                        <p>
+                            {{ ejercicio.descripcion1_ejercicio }}
+                        </p>
+                        <p>
+                            {{ ejercicio.descripcion2_ejercicio }}
+                        </p>
+                        <P>
+                            {{ ejercicio.pasos }}
+                        </P>
+                        
+                    </div>
+                    
+                </article>
+                
+                <div class="volver-inicio" >
+                    <a href="#inicio" class="volver-inicio"> subir</a>
+                </div>
+
+            {% endif %}
+
+        {% endfor %}
+
+        <div class="titulo-seccion" id="brazo">
+            <h1>BRAZO</h1>
+        </div>
+        {% for ejercicio in object_list %}
+
+            {% if ejercicio.section == 'BRAZO' %}
+                <article class="seccion-secundaria">
+                    
+                    <div class="imagen-abdominales">
+                        <img src="../../static/img/{{ ejerciciofoto.imagen }}" alt="rutina-abdominales-imagen">
+                    </div>
+                    
+                    <div class="texto-articulo" >
+                        
+                        <h2>{{ ejercicio.nombre_ejercicio }}</h2>
+                        <p>
+                            {{ ejercicio.descripcion1_ejercicio }}
+                        </p>
+                        <p>
+                            {{ ejercicio.descripcion2_ejercicio }}
+                        </p>
+                        <P>
+                            {{ ejercicio.pasos }}
+                        </P>
+                        
+                    </div>
+                    
+                </article>
+                
+                <div class="volver-inicio" >
+                    <a href="#inicio" class="volver-inicio"> subir</a>
+                </div>
+
+            {% endif %}
+
+        {% endfor %}
+
+    {% else %}
+        <h1>No hay registros de ejercicios</h1>
+    {% endif %}
+
+{% endblock %}
