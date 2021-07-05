@@ -1,0 +1,108 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    
+    <!-- monserrat font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- JQuery -->
+    
+    <!-- personal css y felxbox grid -->
+    <link rel="stylesheet" href="../../../static/css/estilos.css">
+    <link rel="stylesheet" href="../../../static/css/flexboxgrid.css">
+    
+    {% block titulo %} 
+    {% endblock %}
+
+</head>
+<body>
+    <div class="general-container" id="inicio">
+
+        <header class="header-container">
+          <div class="menu-y-titulo"> 
+
+            <div class="titulo-principal" >
+              <h1>GYM & DIET</h1>
+            </div>
+            <nav class="menu-principal-container">
+              
+              <div class="menu-items-container"> 
+                {% block menu_principal %}
+                {% endblock %}
+              </div>
+            </nav>
+
+            <div class="login-area">
+              <a href="#" class="boton primario">Log In</a>
+              <a href="#" class="boton secundario">Registrarse</a>   
+            </div>
+          </div>
+          {% block carousell %}
+          {% endblock %}
+        </header>
+
+        {% block menu_secundario %}
+        {% endblock %}
+
+        <div class="contenido-container">
+
+          {% block contenido_extra %}
+          {% endblock %}
+
+
+          {% block content %}
+          {% endblock %}
+
+        </div>
+
+        <footer class="footer-container">
+          <div class="footer-contacto">
+            <h2>Contactanos</h2>
+            <ul>
+              <li>Telefono: (+56) 2 4337 6558</li>
+              <li>Celular: (+56) 9 6527 1468</li>
+              <li>Correo electronico: gymanddiet@gmail.com</li>
+            </ul>
+          </div>
+    
+          <div class="foote-about-us">
+            <h2>Nosotros</h2>
+            <ul>
+              <li>Somos dos estudiantes de Ingeniería Informática de DuocUC</li>
+              <li>Esta página es un proyecto web para la asignatura de Programación Web</li>
+              <li>Desarrollador Camilo Marilaf</li>
+              <li>Desarrollador Benjamin Riquelme</li>
+              <li>Encuentra nuestro proyecto en: </li>
+              <li><img src="../../static/images/iconos/github-logo.png" height="30" width="30" alt="github-icon"><a href="https://github.com/Camilo1912/proyecto_web_1">Github-gymanddiet</a></li>
+            </ul>
+          </div>
+    
+          <div class="footer-redes">
+            <h2>Redes</h2>
+            <ul class="listado-redes">
+              <li><img src="../../static/images/iconos/instagram.png" height="30" width="30" alt="instagram-icon">Instagram</li>
+              <li><img src="../../static/images/iconos/facebook.png" height="30" width="30" alt="facebook-icon"> Facebook</li>
+              <li><img src="../../static/images/iconos/twitter.png" height="30" width="30" alt="twitter-icon">Twitter</li>
+            </ul>
+          </div>
+        </footer>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- javaScript personal estadisticas covid-19 -->
+    <script src="../../static/js/est_covid.js"></script>
+</body>
+</html>

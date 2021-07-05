@@ -1,0 +1,49 @@
+{% extends 'Registro/base.html' %}
+
+{% block content %} 
+
+<article class="seccion-secundaria">
+
+    <h3>Listado de ejercicios</h3>
+    <a type="button" href="{% url 'crear_seccion' %}" class="btn btn-primary">Agregar</a>
+    <a type="button" href="{% url 'home' %}" class="btn btn-outline-secondary">Inicio</a>
+</article>
+<article class="seccion-secundaria">
+    
+    
+    {% if object_list %}
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Sección</th>
+                    <th>Imagen</th>
+                    <th>Ejercicio</th>
+                    <th>Descripcion1</th>
+                    <th>Descripcion2</th>
+                    <th>Pasos</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ejercicio in object_list %}
+                <tr>
+                    <th scope="row">{{ ejercicio.section }} </th>
+                    <td style="background-image: url('../../static/images/{{ ejercicio.imagen }}');" class="imagen-lista-admin"></td>
+                    <td>{{ ejercicio.nombre_ejercicio }}</td>
+                    <td>{{ ejercicio.descripcion1_ejercicio }}</td>
+                    <td>{{ ejercicio.descripcion2_ejercicio }}</td>
+                    <td>{{ ejercicio.pasos }}</td>
+                    <td>{{ ejercicio.fecha }}</td>
+
+    {% comment %}  <td><a class="btn btn-primary" href="{% url 'edit_ejercicio' ejercicio.id %}">Editar</a></td> <!-- en el entreparentesis url ... indica el apodo de quien se llamará al presionar boton y ejercicio.id es lo que se le va a pasar -->
+                    <td><a class="btn btn-danger" href="{% url 'del_ejercicio' ejercicio.id %}">Eliminar</a></td> {% endcomment %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+    {% else %}
+        <h1>No hay registros de ejercicios</h1>
+    {% endif %} 
+</article>   
+{% endblock %}
