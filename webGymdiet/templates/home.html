@@ -1,4 +1,5 @@
-{% extends 'Registro/base.html' %}
+{% extends 'base.html' %}
+{% load static %}
 
 {% block titulo %}
     <title>GYM & DIET - Inicio</title>
@@ -8,6 +9,9 @@
     <a href="#" class="pagina-actual"> <img src="../../../static/images/iconos/home.png" height="20" width="20" alt="home-icon"> Inicio</a>
     <a href="{% url 'listar_seccion' %}" class="not-pagina-actual"> <img src="../../../static/images/iconos/biceps.png" height="20" width="20" alt="bicep-icon"> Ejercicios</a>
     <a href="{% url 'dieta' %}" class="not-pagina-actual"> <img src="../../../static/images/iconos/nutritional-bars.png" height="20" width="20" alt="nutricion-icon"> Alimentación </a>
+    {% if user.is_authenticated and user.username == 'admin'%}
+        <a href="{% url 'listar_seccion_admin' %}">Administrar</a>
+    {% endif %}
 {% endblock %}
 
 {% block carousell %}
@@ -44,6 +48,7 @@
         <a href="#objetivo">Nuestro objetivo</a>
     </div>
 {% endblock %}
+
 
 
 {% block contenido_extra %}
@@ -151,4 +156,8 @@
         
     </div>
         
+{% endblock %}
+
+{% block script_extra %}
+    <script src="{% static '/js/est_covid.js' %}"></script>
 {% endblock %}

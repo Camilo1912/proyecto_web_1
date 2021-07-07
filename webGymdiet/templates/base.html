@@ -17,8 +17,9 @@
     <!-- JQuery -->
     
     <!-- personal css y felxbox grid -->
-    <link rel="stylesheet" href="../../../static/css/estilos.css">
-    <link rel="stylesheet" href="../../../static/css/flexboxgrid.css">
+    
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/felxboxgrid.css' %}">
     
     {% block titulo %} 
     {% endblock %}
@@ -42,9 +43,20 @@
             </nav>
 
             <div class="login-area">
-              <a href="#" class="boton primario">Log In</a>
-              <a href="#" class="boton secundario">Registrarse</a>   
+              {% if user.is_authenticated %}
+              <div class="usuario">
+                  <img src="{% static '/images/iconos/user.png' %}" height="40px" width="40px" alt="icono-user">
+                  <p class="nombre-usuario"> {{user.username}} </p>
+              </div>
+              <a href="{% url 'logout' %}" class="boton secundario">Logout</a>
+              {% else %}
+              <a href="{% url 'login' %}" class="boton primario">Log In</a>
+              <a href="{% url 'registrar' %}" class="boton secundario">Registrarse</a>
+              {% endif %}
+               
             </div>
+
+
           </div>
           {% block carousell %}
           {% endblock %}
@@ -82,16 +94,16 @@
               <li>Desarrollador Camilo Marilaf</li>
               <li>Desarrollador Benjamin Riquelme</li>
               <li>Encuentra nuestro proyecto en: </li>
-              <li><img src="../../static/images/iconos/github-logo.png" height="30" width="30" alt="github-icon"><a href="https://github.com/Camilo1912/proyecto_web_1">Github-gymanddiet</a></li>
+              <li><img src="{% static '/images/iconos/github-logo.png' %}" height="30" width="30" alt="github-icon"><a href="https://github.com/Camilo1912/proyecto_web_1">Github-gymanddiet</a></li>
             </ul>
           </div>
     
           <div class="footer-redes">
             <h2>Redes</h2>
             <ul class="listado-redes">
-              <li><img src="../../static/images/iconos/instagram.png" height="30" width="30" alt="instagram-icon">Instagram</li>
-              <li><img src="../../static/images/iconos/facebook.png" height="30" width="30" alt="facebook-icon"> Facebook</li>
-              <li><img src="../../static/images/iconos/twitter.png" height="30" width="30" alt="twitter-icon">Twitter</li>
+              <li><img src="{% static '/images/iconos/instagram.png' %}" height="30" width="30" alt="instagram-icon">Instagram</li>
+              <li><img src="{% static '/images/iconos/facebook.png' %}" height="30" width="30" alt="facebook-icon"> Facebook</li>
+              <li><img src="{% static '/images/iconos/twitter.png' %}" height="30" width="30" alt="twitter-icon">Twitter</li>
             </ul>
           </div>
         </footer>
@@ -103,6 +115,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- javaScript personal estadisticas covid-19 -->
-    <script src="../../static/js/est_covid.js"></script>
+    {% block script_extra %}
+    {% endblock %}
 </body>
 </html>

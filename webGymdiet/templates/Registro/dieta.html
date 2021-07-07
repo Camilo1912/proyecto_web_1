@@ -1,4 +1,4 @@
-{% extends 'Registro/base.html' %}
+{% extends 'base.html' %}
 
 {% block titulo %}
     <title>GYM & DIET - Dieta</title>
@@ -8,6 +8,9 @@
     <a href="{% url 'home' %}" class="not-pagina-actual"> <img src="../../static/images/iconos/home.png" height="20" width="20" alt="home-icon"> Inicio</a>
     <a href="{% url 'listar_seccion' %}" class="not-pagina-actual"> <img src="../../static/images/iconos/biceps.png" height="20" width="20" alt="bicep-icon"> Ejercicios</a>
     <a class="pagina-actual" href="dieta.html"> <img src="../../static/images/iconos/nutritional-bars.png" height="20" width="20" alt="nutricion-icon"> Alimentación</a>
+    {% if user.is_authenticated and user.username == 'admin'%}
+        <a href="{% url 'listar_seccion_admin' %}">Administrar</dministrara>
+    {% endif %}
 {% endblock %}
 
 
@@ -52,6 +55,7 @@
         </div>
         <article class="seccion-secundaria">
             <form id="form" name="test" action="" method="POST">
+                {% csrf_token %}
                 <div class="row">
                 <!--Genero-->
                 <label for="genero" class="form-group">Genero:</label>

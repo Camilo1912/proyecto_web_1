@@ -1,13 +1,21 @@
-{% extends 'Registro/base.html' %}
+{% extends 'base.html' %}
+
+{% block menu_principal %}
+    <a href="{% url 'listar_seccion_admin' %}" class="pagina-actual">Listado</a>
+    <a href="{% url 'crear_seccion' %}" class="not-pagina-actual">Agregar</a>
+    <a href="{% url 'home' %}" class="not-pagina-actual">Eliminar</a>
+    <a href="{% url 'home' %}" class="not-pagina-actual">Modificar</a>
+{% endblock %}
 
 {% block content %} 
 
-<article class="seccion-secundaria">
+<article class="seccion-secundaria titulo-listado">
 
-    <h3>Listado de ejercicios</h3>
+    <h2>Listado de ejercicios</h2>
     <a type="button" href="{% url 'crear_seccion' %}" class="btn btn-primary">Agregar</a>
-    <a type="button" href="{% url 'home' %}" class="btn btn-outline-secondary">Inicio</a>
+
 </article>
+
 <article class="seccion-secundaria">
     
     
@@ -26,9 +34,9 @@
             </thead>
             <tbody>
                 {% for ejercicio in object_list %}
-                <tr>
-                    <th scope="row">{{ ejercicio.section }} </th>
-                    <td style="background-image: url('../../static/images/{{ ejercicio.imagen }}');" class="imagen-lista-admin"></td>
+                <tr class="fila-tabla">
+                    <th scope="row">{{ ejercicio.section }}</th>
+                    <td> <div style="background-image: url('../../static/images/{{ ejercicio.imagen }}');" class="imagen-lista-admin"></div></td>
                     <td>{{ ejercicio.nombre_ejercicio }}</td>
                     <td>{{ ejercicio.descripcion1_ejercicio }}</td>
                     <td>{{ ejercicio.descripcion2_ejercicio }}</td>

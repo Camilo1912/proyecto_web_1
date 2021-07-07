@@ -20,10 +20,10 @@ class SeccionForm(forms.ModelForm):
         }
 
         widgets = {
-            #'section': forms.ChoiceField(choices=SECTION),
-            'imagen': forms.FileInput(),
+            'section': forms.Select(choices=SECTION, attrs={'class':'form-control','type':'file'}),
+            'fotografia':forms.FileInput(attrs={'class':'form-control','type':'file'}),
             'nombre_ejercicio': forms.TextInput(attrs={'class': 'form-control'}),
-            'descripcion1_ejercicio': forms.TextInput(attrs={'class': 'form-control'}),
-            'descripcion2_ejercicio': forms.TextInput(attrs={'class': 'form-control'}),
-            'pasos': forms.TextInput(attrs={'class': 'form-control'}),
+            'descripcion1_ejercicio': forms.Textarea(attrs={'class': 'form-control'}),
+            'descripcion2_ejercicio': forms.Textarea(attrs={'class': 'form-control'}),
+            'pasos': forms.Textarea(attrs={'class': 'form-control'}),
         }

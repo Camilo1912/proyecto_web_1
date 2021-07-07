@@ -18,10 +18,17 @@ from django.urls import path
 from django.urls.conf import include
 
 from django.views.generic import TemplateView
+from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('registro/', include('apps.Registro.urls')),
+    path('usuario/', include('apps.Usuario.urls')),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('dieta', TemplateView.as_view(template_name='Registro/dieta.html'), name='dieta'),
+
+    
+    path('login/', LoginView.as_view(redirect_authenticated_user=True,template_name='Usuario/usuario_login.html'), name='login'),
+    path('logout/', LogoutView.as_view(template_name='Usuario/logout.html'), name='logout'),
 ]

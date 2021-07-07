@@ -106,8 +106,8 @@ header {
     justify-content: center;
     align-items:flex-end;
     width: 250px;
-    height: 100px;
-    padding: auto;
+    height: 115px;
+    padding: 40px;
 }
 
 
@@ -122,18 +122,18 @@ header {
 }
 
 .primario {
-    background-color: #20b2aa;
-    color: white;
+    border: 1px solid #20b2aa;
+    color: #20b2aa;
 }
 
 .primario:hover {
-    background-color: #1a8d87;
+    background-color: #20b2aa;
     color: white;
     box-shadow: 0 2px 5px #826653c2;
 }
 
 .secundario:hover {
-    border: 1px solid #20b2aa;
+    /* border: 1px solid #20b2aa; */
     color: whitesmoke;
 }
 
@@ -341,11 +341,88 @@ header {
 }
 
 .imagen-lista-admin {
-    height: auto;
-    width: 250px;
+    height: 150px;
+    width: 200px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.titulo-listado{
+    display: flex;
+    justify-content: space-between;
+}
+
+.boton-grabar {
+    padding: 5px 15px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.forma-agregar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.forma-agregar form{
+    display: flex;
+    flex-direction: column;
+}
+
+.forma-agregar form * {
+    margin: 10px;
+}
+
+.usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 7px;
+    border: 1px solid #333333;
+}
+
+.nombre-usuario {
+    padding-left: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.logon{
+    justify-content: center;
+    align-items: center;
+}
+
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto%;
+}
+.imagen-login {
+    width: 50%;
+}
+
+.formulario-login {
+    margin:auto;
+    box-shadow: 0 15px 40px rgb(0, 0, 0, .2);
+    padding: 100px;
+    border-radius: 7px;
+}
+
+.formulario-login * {
+    margin: 5px;
+    color: #177571;
+}
+
+.btn-login {
+    float: right;
+    width: 50%;
+    margin-top: 30px;
 }
 
 @media (max-width: 768px) {
@@ -393,9 +470,9 @@ header {
     }
 }
 
-@media (max-width: 1230px) {
+@media (max-width: 1250px) {
     .general-container {
-        width: 90%;
+        width: 100%;
     }
 
     .imagen-abdominales {
@@ -442,6 +519,12 @@ header {
     
     .texto-articulo {
         width: 100%;
+    }
+
+    .login-area {
+        visibility: hidden;
+        width: 0;
+        height: 0;
     }
 }
 

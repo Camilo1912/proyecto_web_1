@@ -1,0 +1,20 @@
+{% extends 'base.html' %} 
+ 
+{% block menu_principal %}
+    <a href="{% url 'home' %}" class="not-pagina-actual"> <img src="../../static/images/iconos/home.png" height="20" width="20" alt="home-icon"> Inicio</a>
+    <a href="{% url 'listar_seccion' %}" class="not-pagina-actual"> <img src="../../static/images/iconos/biceps.png" height="20" width="20" alt="bicep-icon"> Ejercicios</a>
+    <a href="{% url 'dieta' %}" class="not-pagina-actual" href="dieta.html"> <img src="../../static/images/iconos/nutritional-bars.png" height="20" width="20" alt="nutricion-icon"> Alimentación</a>
+{% endblock %}
+
+{% block content %}
+
+<article class="seccion-secundaria forma-agregar">
+    <h2>Registro de Usuario</h2>
+
+    <form method="POST">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit" class="btn-primary boton-grabar">GRABAR</button>
+    </form>
+</article> 
+
+{% endblock %}

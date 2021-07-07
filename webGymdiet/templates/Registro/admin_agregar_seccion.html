@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block menu_principal %}
+    <a href="{% url 'listar_seccion_admin' %}" class="not-pagina-actual">Listado</a>
+    <a href="{% url 'crear_seccion' %}" class="pagina-actual">Agregar</a>
+    <a href="{% url 'home' %}" class="not-pagina-actual">Eliminar</a>
+    <a href="{% url 'home' %}" class="not-pagina-actual">Modificar</a>
+{% endblock %}
+
+{% block content %}
+
+
+<article class="seccion-secundaria forma-agregar">
+    
+    <form method="POST" enctype="multipart/form-data" > {% comment %} importante agregar:  enctype="multipart/form-data" , para poder adjuntar imagen{% endcomment %}
+        <h2>Agregar Ejercicio</h2>
+        {% csrf_token %} {{ form.as_table }}
+        <button type="submit" class="btn-primary boton-grabar">GRABAR</button>
+    </form>
+
+</article>
+{% endblock content %}
+
+
+

@@ -18,7 +18,7 @@ class Ejercicio(models.Model):
     descripcion1_ejercicio = models.TextField(default='no info')
     descripcion2_ejercicio = models.TextField(default='no info')
     pasos = models.TextField()
-    fecha = models.DateField()
+    fecha = models.DateField(auto_now=True)
 
     def __str__(self):
         return self.nombre_ejercicio

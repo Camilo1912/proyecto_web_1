@@ -1,0 +1,55 @@
+{% extends 'base.html' %} 
+{% load static %}
+ 
+{% block title %}
+Registro
+{% endblock %}
+ 
+{% block menu_principal %}
+    <a href="{% url 'home' %}" class="not-pagina-actual"> <img src="../../static/images/iconos/home.png" height="20" width="20" alt="home-icon"> Inicio</a>
+    <a href="{% url 'listar_seccion' %}" class="not-pagina-actual"> <img src="../../static/images/iconos/biceps.png" height="20" width="20" alt="bicep-icon"> Ejercicios</a>
+    <a href="{% url 'dieta' %}" class="not-pagina-actual" href="dieta.html"> <img src="../../static/images/iconos/nutritional-bars.png" height="20" width="20" alt="nutricion-icon"> Alimentación</a>
+{% endblock %}
+ 
+{% block header %}
+{% endblock %}
+ 
+{% block content %}
+<article class="seccion-secundaria logon">
+    
+    <img src="{% static '/images/iconos/51357.jpg' %}" class="imagen-login" alt="imagen-login">
+    
+    <div id="registro" class="container-login">
+
+        <form method="POST" id="formulario" class="formulario-login">
+            <h1 class="display">Login</h1><br>
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="username">Nombre de Usuario</label><br>
+                <input name="username" class="form-control" type="text"/>
+                <div class="bg-danger mt-1">{{ form.errors.username }}</div>
+            </div>
+    
+            <div class="form-group">
+                <label for="password">Password</label><br>
+                <input name="password" class="form-control" type="password"/>
+                <div class="bg-danger mt-1">{{ form.errors.password }}</div>
+            </div>
+    
+            {% if form.non_field_errors %}
+            <div class="form-group">
+                <div class="bg-danger mt-1 p-2">Login incorrecto!</div>
+            </div>  
+            {% endif %}
+            
+            {{form.non_field_errors}}
+    
+            <div class="form-group">
+                <input class="btn primario btn-login" type="submit" value="Enviar"/>
+            </div>
+            
+        </form>
+    </div>
+</article>
+{% endblock %}

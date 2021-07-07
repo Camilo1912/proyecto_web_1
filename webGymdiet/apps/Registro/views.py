@@ -9,7 +9,7 @@ from django.urls import reverse_lazy
 class SeccionCreate(CreateView):
     model = Ejercicio
     form_class = SeccionForm
-    template_name = 'Registro/agregar_seccion.html'
+    template_name = 'Registro/admin_agregar_seccion.html'
     success_url = reverse_lazy('listar_seccion_admin')
 
 class SeccionList(ListView):
@@ -18,18 +18,18 @@ class SeccionList(ListView):
 
 class SeccionListAdmin(ListView):
     model = Ejercicio
-    template_name = 'Registro/listar_seccion.html'
+    template_name = 'Registro/admin_listar_seccion.html'
 
-""" class SeccionUpdate(UpdateView):
+class SeccionUpdate(UpdateView):
     model = Ejercicio
     from_class = SeccionForm
     template_name = 'Registro/seccion_form.html'
-    success_url = reverse_lazy('listar_seccion') """
+    success_url = reverse_lazy('listar_seccion')
 
-""" class SeccionDelete():
+class SeccionDelete():
     model = Ejercicio
     form_class = SeccionForm
-    template_name = 'Registro/seccion_delete.html'
-    success_url = reverse_lazy('listar_seccion') """
+    template_name = 'Registro/admin_eliminar_seccion.html'
+    success_url = reverse_lazy('listar_seccion_admin')
 
 #-------------------------------------------------------
