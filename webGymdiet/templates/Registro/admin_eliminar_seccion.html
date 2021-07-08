@@ -4,27 +4,29 @@
     <title>Admin - Eliminar ejercicio</title>
 {% endblock %}
 
+{% block menu_principal %}
+    <a href="{% url 'listar_seccion_admin' %}" class="not-pagina-actual">Listado</a>
+    <a href="{% url 'crear_seccion' %}" class="not-pagina-actual">Agregar</a>
+    <a href="{% url 'list_user' %}" class="not-pagina-actual">Usuarios</a>
+    <a href="{% url 'home' %}" class="not-pagina-actual pag-vista">Visualizar</a>
+{% endblock %}
+
 {% block content %}
 
-<body>
+<div class="seccion-secundaria">
  
-<div class="container mb-3 mt-3">
- 
-<form method="POST">{% csrf_token %}
- 
-    <div>
-       
-    <h3>¿Desea eliminar el registro {{object.nombre_ejercicio}}?</h3><br>
-    <button class = "btn btn-danger" type="submit">Si</button>
-    <a class= "btn btn-default" href="{% url 'docentes_list' %}">Cancelar</a> 
+    <form method="POST">{% csrf_token %}
     
-    </div>
- 
-</form>
-<br><br><br><br><br><br><br><br><br><br><br><br>
+        <div>
+        
+        <h3>¿Desea eliminar el registro {{object.nombre_ejercicio}}?</h3><br>
+        <button class = "btn btn-danger" type="submit">Si</button>
+        <a class= "btn btn-default" href="{% url 'listar_seccion_admin' %}">Cancelar</a> 
+        
+        </div>
+    
+    </form>
  
 </div>
  
-</body>
-
 {% endblock content %}

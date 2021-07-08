@@ -466,6 +466,11 @@ header {
     border-top-right-radius: 5px;
 }
 
+.listado-usuario {
+    padding: 10px 50px;
+    margin: 10px;
+    border: 1px solid #20b2aa;
+}
 
 
 @media (max-width: 768px) {

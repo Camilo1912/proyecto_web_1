@@ -40,10 +40,10 @@ class SeccionListAdmin(ListView):
 class SeccionUpdate(UpdateView):
     model = Ejercicio
     from_class = SeccionForm
-    template_name = 'Registro/seccion_form.html'
+    template_name = 'Registro/admin_editar_seccion.html'
     success_url = reverse_lazy('listar_seccion')
 
-class SeccionDelete():
+class SeccionDelete(DeleteView):
     model = Ejercicio
     form_class = SeccionForm
     template_name = 'Registro/admin_eliminar_seccion.html'
@@ -51,16 +51,15 @@ class SeccionDelete():
 
 #-------------------------------------------------------
 
-""" 
+
 class API_objects(generics.ListCreateAPIView):
     queryset = Ejercicio.objects.all()
     serializer_class = EjercicioSerializer
-    
+
 class API_objects_details(generics.RetrieveUpdateDestroyAPIView):
     queryset = Ejercicio.objects.all()
     serializer_class = EjercicioSerializer
 
-"""
 #------------------------------------------------------
 
 @api_view(['GET','POST'])

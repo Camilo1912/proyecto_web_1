@@ -1,21 +1,32 @@
-{% extends 'Usuario/base.html' %} 
- 
+
+{% extends 'base.html' %} 
+
 {% block titulo %}
     <title>Admin - Lista usuarios</title>
 {% endblock %}
 
+{% block menu_principal %}
+    <a href="{% url 'listar_seccion_admin' %}" class="not-pagina-actual">Listado</a>
+    <a href="{% url 'crear_seccion' %}" class="not-pagina-actual">Agregar</a>
+    <a href="{% url 'list_user' %}" class="pagina-actual">Usuarios</a>
+    <a href="{% url 'home' %}" class="not-pagina-actual pag-vista">Visualizar</a>
+{% endblock %}
+
 {% block content %}
-{% block titulo_principal %} Lista de Usuarios Registrados {% endblock %}
+
+<article class="seccion-secundaria forma-agregar">
+    <h2>Lista de Usuarios Registrados</h2>
    {% if object_list %}
- 
+
         {% for user in object_list %}
-            <p>Nombre: {{ user.username }}</p>
-            <p>email: {{ user.email }}</p>      
-            <br>
+            <div class="listado-usuario">
+                <p>Nombre: {{ user.username }}</p>
+                <p>email: {{ user.email }}</p>      
+            </div>
         {% endfor %}
         
     {% else %}
         <h1>No hay registros de user</h1>
     {% endif %}
- 
+</article>
 {% endblock %}

@@ -7,7 +7,7 @@
 {% block menu_principal %}
     <a href="{% url 'listar_seccion_admin' %}" class="pagina-actual">Listado</a>
     <a href="{% url 'crear_seccion' %}" class="not-pagina-actual">Agregar</a>
-    <a href="{% url 'home' %}" class="not-pagina-actual">Editar</a>
+    <a href="{% url 'list_user' %}" class="not-pagina-actual">Usuarios</a>
     <a href="{% url 'home' %}" class="not-pagina-actual pag-vista">Visualizar</a>
 {% endblock %}
 
@@ -34,6 +34,7 @@
                     <th>Descripcion2</th>
                     <th>Pasos</th>
                     <th>Fecha</th>
+                    <th>Acción</th>
                 </tr>
             </thead>
             <tbody>
@@ -46,9 +47,8 @@
                     <td>{{ ejercicio.descripcion2_ejercicio }}</td>
                     <td>{{ ejercicio.pasos }}</td>
                     <td>{{ ejercicio.fecha }}</td>
+                    <td><a class="btn btn-primary" href="{% url 'editar_seccion' ejercicio.id %}">Editar</a> <a class="btn btn-danger" href="{% url 'eliminar_seccion' ejercicio.id %}">Eliminar</a> </td>
 
-    {% comment %}  <td><a class="btn btn-primary" href="{% url 'edit_ejercicio' ejercicio.id %}">Editar</a></td> <!-- en el entreparentesis url ... indica el apodo de quien se llamará al presionar boton y ejercicio.id es lo que se le va a pasar -->
-                    <td><a class="btn btn-danger" href="{% url 'del_ejercicio' ejercicio.id %}">Eliminar</a></td> {% endcomment %}
                 </tr>
                 {% endfor %}
             </tbody>

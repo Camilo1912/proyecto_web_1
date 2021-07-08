@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+
+{% block titulo %}
+    <title>Admin - Agregar ejercicio</title>
+{% endblock %}
+
+
+{% block menu_principal %}
+    <a href="{% url 'listar_seccion_admin' %}" class="not-pagina-actual">Listado</a>
+    <a href="{% url 'crear_seccion' %}" class="pagina-actual">Agregar</a>
+    <a href="{% url 'list_user' %}" class="not-pagina-actual">Usuarios</a>
+    <a href="{% url 'home' %}" class="not-pagina-actual pag-vista">Visualizar</a>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="column">
+        
+        <div >
+            <form method="POST" >
+                {% csrf_token %} {{ form.as_table }}
+                <button type="submit">GRABAR</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

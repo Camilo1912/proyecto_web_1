@@ -16,4 +16,4 @@ class RegistroUsuario(CreateView):
 
 class UserList(ListView):
     model = User
-    template_name = 'Usuario/list_user.html'
+    template_name = 'Usuario/listar_usuario.html'
