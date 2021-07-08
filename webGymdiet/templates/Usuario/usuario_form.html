@@ -1,5 +1,9 @@
 {% extends 'base.html' %} 
  
+{% block titulo %}
+    <title>G&D - Registro</title>
+{% endblock %}
+
 {% block menu_principal %}
     <a href="{% url 'home' %}" class="not-pagina-actual"> <img src="../../static/images/iconos/home.png" height="20" width="20" alt="home-icon"> Inicio</a>
     <a href="{% url 'listar_seccion' %}" class="not-pagina-actual"> <img src="../../static/images/iconos/biceps.png" height="20" width="20" alt="bicep-icon"> Ejercicios</a>

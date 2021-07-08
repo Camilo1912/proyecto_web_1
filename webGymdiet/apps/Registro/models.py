@@ -13,7 +13,7 @@ SECTION = (
 
 class Ejercicio(models.Model):
     section = models.CharField(max_length=15, choices=SECTION, default='NONE')
-    imagen = models.ImageField(upload_to='ejerciciofoto')
+    imagen = models.ImageField(upload_to='ejerciciofoto', null=True)
     nombre_ejercicio = models.CharField(max_length=30)
     descripcion1_ejercicio = models.TextField(default='no info')
     descripcion2_ejercicio = models.TextField(default='no info')

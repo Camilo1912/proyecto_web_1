@@ -401,7 +401,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 50%;
-    height: auto%;
+    height: auto;
 }
 .imagen-login {
     width: 50%;
@@ -424,6 +424,49 @@ header {
     width: 50%;
     margin-top: 30px;
 }
+
+.login-wall {
+    margin: auto;
+    box-shadow: 0 6px 20px rgb(0, 0, 0, .15);
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.login-wall h3 {
+    color: #444444;
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.login-wall p {
+    color: #20b2aa;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.login-wall a {
+    float: right;
+    padding: 5px 10px;
+    border: 1px solid #20b2aa;
+    margin: 10px;
+    color: #17746f;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.login-wall a:hover {
+    background-color: #20b2aa;
+    color: white;
+}
+
+.pag-vista {
+    background-color: rgba(255, 166, 0, 0.678);
+    border-top-right-radius: 5px;
+}
+
+
 
 @media (max-width: 768px) {
     .sr-only {
@@ -470,7 +513,7 @@ header {
     }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1300px) {
     .general-container {
         width: 100%;
     }
@@ -482,12 +525,16 @@ header {
     .texto-articulo {
         width: 80%;
     }
+    .menu-items-container img{
+        display: none;
+    }
 }
 
 @media (max-width: 1100px) {
     .general-container {
         width: 100%;
     }
+    
 }
 
 @media (max-width: 900px) {
@@ -525,6 +572,22 @@ header {
         visibility: hidden;
         width: 0;
         height: 0;
+    }
+    .usuario {
+        visibility: hidden;
+    }
+
+
+    .imagen-login {
+        width: 80%;
+    }
+    
+    .container-login {
+        width: 100%;
+    }
+
+    .formulario-login {
+        padding: 50px;
     }
 }
 

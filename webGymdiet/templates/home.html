@@ -9,7 +9,7 @@
     <a href="#" class="pagina-actual"> <img src="../../../static/images/iconos/home.png" height="20" width="20" alt="home-icon"> Inicio</a>
     <a href="{% url 'listar_seccion' %}" class="not-pagina-actual"> <img src="../../../static/images/iconos/biceps.png" height="20" width="20" alt="bicep-icon"> Ejercicios</a>
     <a href="{% url 'dieta' %}" class="not-pagina-actual"> <img src="../../../static/images/iconos/nutritional-bars.png" height="20" width="20" alt="nutricion-icon"> Alimentación </a>
-    {% if user.is_authenticated and user.username == 'admin'%}
+    {% if user.is_authenticated and user.is_superuser %}
         <a href="{% url 'listar_seccion_admin' %}">Administrar</a>
     {% endif %}
 {% endblock %}

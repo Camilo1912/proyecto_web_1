@@ -1,5 +1,9 @@
 {% extends 'Usuario/base.html' %} 
  
+{% block titulo %}
+    <title>Admin - Lista usuarios</title>
+{% endblock %}
+
 {% block content %}
 {% block titulo_principal %} Lista de Usuarios Registrados {% endblock %}
    {% if object_list %}
